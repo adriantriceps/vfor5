@@ -28,7 +28,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Route::get('/threads', 'ThreadsController@index')->name('home');
 
-Route::get('/', 'GreetingsController@index');
+Route::get('/', 'GreetingsController@hello');
+//Route::get('/', 'GreetingsController@index');
 
 Route::get('threads/create', 'ThreadsController@create');
 //Route::get('/threads/{id}', 'ThreadsController@show');

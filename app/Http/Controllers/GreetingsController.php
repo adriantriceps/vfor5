@@ -13,4 +13,11 @@ class GreetingsController extends Controller
 
       return view('greetings.greetings', compact('message'));
     }
+
+    public function hello()
+    {
+      $name = "Adrian";
+
+      return view('greetings.hello', compact('name'));
+    }
 }
