@@ -11,6 +11,29 @@ class ThreadsController extends Controller
     {
       $message = "This is the Threads index view";
 
+      return view('threads.index', compact('message'));
+    }
+
+    public function create()
+    {
+      $message = "This is the Threads create view";
       return $message;
+      //return view('threads.index', compact('message'));
+    }
+
+    public function four()
+    {
+      $message = "This is the Threads 4 view";
+      return $message;
+      //return view('threads.index', compact('message'));
+    }
+
+    public function id($id)
+    {
+      $message = "This is the Threads " . $id . " view.";
+
+      return $message;
+
+      //return view('threads.index', compact('message'));
     }
 }

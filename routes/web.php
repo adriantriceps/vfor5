@@ -11,12 +11,30 @@
 |
 */
 
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/threads', 'ThreadsController@index');
+
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/threads', 'ThreadsController@index')->name('home');
+//Route::get('/threads', 'ThreadsController@index')->name('home');
+
+Route::get('/', 'GreetingsController@index');
+
+Route::get('threads/create', 'ThreadsController@create');
+//Route::get('/threads/{id}', 'ThreadsController@show');
+Route::get('/threads/four', 'ThreadsController@four');
+
+Route::get('/threads/{id}', 'ThreadsController@id');
+//Route::get('/threads/{id}', function ($id) {
+  //  return 'User '.$id;
+//});
