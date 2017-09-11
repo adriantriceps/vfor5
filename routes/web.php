@@ -35,7 +35,8 @@ Route::get('threads/create', 'ThreadsController@create');
 //Route::get('/threads/{id}', 'ThreadsController@show');
 Route::get('/threads/four', 'ThreadsController@four');
 
-Route::get('/threads/{id}', 'ThreadsController@id');
+//Route::get('/threads/{id}', 'ThreadsController@id');
+Route::get('/threads/{id}/{count}', 'ThreadsController@id')->where(['id' => '[0-9]+', 'count' => '[0-9]+']);//->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
 //Route::get('/threads/{id}', function ($id) {
   //  return 'User '.$id;
 //});

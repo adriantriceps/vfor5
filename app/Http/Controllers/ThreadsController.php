@@ -28,9 +28,9 @@ class ThreadsController extends Controller
       //return view('threads.index', compact('message'));
     }
 
-    public function id($id)
+    public function id($id, $count)
     {
-      $message = "This is the Threads " . $id . " view.";
+      $message = "This is greeting number " . $id . " with " . $count . " replies";
 
       return $message;
 
